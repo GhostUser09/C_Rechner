@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int a;
+//#include <windows.h>
+//#include <conio.h>
 
 float pi = 3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651328230664709384460955058223172535940812848111745028410270193852110555964462294895493038196442881097566593344612847564823378678316527120190914564856692346034861045432664821339360726024914127372458700660631558817488152092096282925409171536436789259036001133053054882046652138414695194151160943305727036575959195309218611738193261179310511854807446237996274956735188575272489122793818301194912;
 
@@ -58,9 +58,7 @@ void kreisBerechnen()
     printf("Radius: %f\n", r);
     printf("Umfang: %f\n", 2 * r * pi);
     printf("Fläche: %f\n", r * r * pi);
-    
-    //getc(stdin);
-    //printf("Test");
+    //getch();
     system("clear");
 }
 
@@ -77,14 +75,39 @@ void formelBerechnung()
     printf("Höhe: %f\n", h);
     printf("Kreisfläche: %f\n", r * r * pi);
     printf("Zylindervolumen: %f\n", r * r * pi * h);
+    printf("Zylindermantel: %f\n", 2 * pi * r * h);
     printf("Spherenfläche: %f\n", 4 * pi * r * r);
     printf("Spherenvolumen: %f\n", 4/3 * pi * r * r * r);
+    //getch();
+    system("clear");
+    
+}
+
+void basicFunction()
+{
+    float basic;
+    //Das ist eine Test Funktion!
+    printf("$$    $$                      $$                        $$\n");
+    printf("$$    $$                      $$                        $$\n");
+    printf("$$    $$   $$$$$$    $$$$$$$  $$    $$   $$$$$$    $$$$$$$\n");
+    printf("$$$$$$$$        $$  $$        $$   $$   $$    $$  $$    $$\n");
+    printf("$$    $$   $$$$$$$  $$        $$$$$$    $$$$$$$$  $$    $$\n");
+    printf("$$    $$  $$    $$  $$        $$   $$   $$        $$    $$\n");
+    printf("$$    $$   $$$$$$$   $$$$$$$  $$    $$   $$$$$$$   $$$$$$$\n");
+    scanf("%f", basic);
+    
+    if(basic == 1)
+    {
+        system("clear");
+        taschenrechner;
+    }
+    else if()
 }
 
 int main()
 {
-    while(a < 1)
-    {
+    //while(a < 1)
+    //{
         int auswahl;
         printf("$$$$$$$                       $$                                    \n");
         printf("$$    $$                      $$                                    \n");
@@ -99,22 +122,32 @@ int main()
         
         if(auswahl == 1)
         {
+            system("clear");
             taschenRechner();
         }
         else if(auswahl == 2)
         {
+            system("clear");
             kreisBerechnen();
         }
         else if(auswahl == 3)
         {
+            system("clear");
             formelBerechnung();
         }
-        else{
+        else if(auswahl == 1302)
+        {
+            printf("Das ist keine Option!\n");
+            //getch();
+            system("clear");
+            basicFunction();
+        }
+        else
+        {
             printf("Das ist keine Option!");
+            //getch();
             system("clear");
             main();
         }
-    }
-    
-    system("clear");
+    //}
 }
