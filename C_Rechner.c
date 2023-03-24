@@ -17,9 +17,9 @@ void taschenRechner()
     float b;
     float f;
     
-    printf("Gib eine Zahl fur A an!\n");
+    printf("Gib eine Zahl f%cr A an!\n", ue);
     scanf("%f", &a);
-    printf("Gib eine Zahl fur B an!\n");
+    printf("Gib eine Zahl f%cr B an!\n", ue);
     scanf("%f", &b);
     printf("\n1 = +\n2 = -\n3 = *\n4 = /\n5 = Zur%cck\n", ue);
     scanf("%f", &f);
@@ -100,6 +100,15 @@ void formelBerechnung()
     
 }
 
+void collatzProblem()
+{
+    int c;
+
+    printf("Gib die Zahl ein!\n");
+    scanf("%d", &c);
+    printf("%d", &c);
+}
+
 void basicFunction()
 {
     float basic;
@@ -156,7 +165,7 @@ int main()
         printf("$$    $$  $$        $$        $$    $$  $$    $$  $$        $$      \n");
         printf("$$    $$   $$$$$$$   $$$$$$$  $$    $$  $$    $$   $$$$$$$  $$      \n");
         printf("                                                                    \n");
-        printf("1. Taschenrechner\n2. Kreis berechnen\n3. Formelberechnung\n4. Ausgang\n");
+        printf("1. Taschenrechner\n2. Kreis berechnen\n3. Formelberechnung\n4. Collatz Problem\n5. Ausgang\n");
         scanf("%d", &auswahl);
         
         if(auswahl == 1)
@@ -177,6 +186,11 @@ int main()
         else if(auswahl == 4)
         {
             system("cls");
+            collatzProblem();
+        }
+        else if(auswahl == 5)
+        {
+            system("cls");
             printf("Auf wieder sehen!");
             getch();
             return 0;
@@ -188,13 +202,6 @@ int main()
             system("cls");
             basicFunction();
         }
-        /*else if(auswahl == 5)
-        {
-            printf("Test");
-            printf("%c", ae);
-            printf("%c", oe);
-            printf("%c", ue);
-        }*/
         else
         {
             printf("\nDas ist keine Option!");
