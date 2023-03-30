@@ -102,11 +102,96 @@ void formelBerechnung()
 
 void collatzProblem()
 {
-    int c;
+    int number;
 
-    printf("Gib die Zahl ein!\n");
-    scanf("%d", &c);
-    printf("%d", &c);
+    printf("ACHTUNG: KEINE ZAHLEN MIT MEHR ALS 9 NUMMERN SONST H%cNGT SICH DAS PROGRAMM AUF\n", ae);
+    printf("Geben Sie eine Zahl ein: ");
+    scanf("%d", &number);
+
+    while (number != 1) {
+        collatzCalculate(number);
+        number = (number % 2 == 0) ? number / 2 : 3 * number + 1;
+    }
+
+    printf("Die Rechnung ist beendet.\n");
+    
+    getch();
+    system("cls");
+}
+
+void collatzProblemIntOnly()
+{
+    int number;
+
+    printf("ACHTUNG: KEINE ZAHLEN MIT MEHR ALS 9 NUMMERN SONST H%cNGT SICH DAS PROGRAMM AUF\n", ae);
+    printf("Geben Sie eine Zahl ein: ");
+    scanf("%d", &number);
+
+    while (number != 1) {
+        collatzCalculateIntOnly(number);
+        number = (number % 2 == 0) ? number / 2 : 3 * number + 1;
+    }
+
+    printf("Die Rechnung ist beendet.\n");
+    
+    getch();
+    system("cls");
+}
+
+void collatzCalculate(int n)
+{
+    if (n % 2 == 0) {
+        // n ist gerade
+        printf("%d / 2 =     %d\n", n, n / 2);
+    } else {
+        // n ist ungerade
+        printf("3 * %d + 1 = %d\n", n, 3 * n + 1);
+    }
+}
+
+void collatzCalculateIntOnly(int n)
+{
+    if (n < 0)
+    {
+        printf("Diese Zahl kann nicht berechnet werden.");
+        getch();
+        system("cls");
+        main();
+    } else {
+        if (n % 2 == 0)
+        {
+            // n ist gerade
+            printf("= %d\n", n / 2);
+        } else {
+            // n ist ungerade
+            printf("= %d\n", 3 * n + 1);
+        }
+    }
+}
+
+void collatzAuswahl()
+{
+    int coll;
+    printf(" $$$$$$             $$  $$              $$              \n");
+    printf("$$    $$            $$  $$              $$              \n");
+    printf("$$         $$$$$$   $$  $$   $$$$$$   $$$$$$    $$$$$$$$\n");
+    printf("$$        $$    $$  $$  $$        $$    $$           $$ \n");
+    printf("$$        $$    $$  $$  $$   $$$$$$$    $$        $$$$  \n");
+    printf("$$    $$  $$    $$  $$  $$  $$    $$    $$  $$   $$     \n");
+    printf(" $$$$$$    $$$$$$   $$  $$   $$$$$$$     $$$$   $$$$$$$$\n\n");
+    printf("1. Mit Rechnung\n2. Ohne Rechnung\n");
+    scanf("%d", &coll);
+
+    if(coll == 1)
+    {
+        system("cls");
+        collatzProblem();
+    }
+    else if(coll == 2)
+    {
+        system("cls");
+        collatzProblemIntOnly();
+    }
 }
 
 void basicFunction()
@@ -154,6 +239,7 @@ void basicFunction()
 
 int main()
 {
+    system("cls");
     while(a < 1)
     {
         int auswahl;
@@ -186,7 +272,7 @@ int main()
         else if(auswahl == 4)
         {
             system("cls");
-            collatzProblem();
+            collatzAuswahl();
         }
         else if(auswahl == 5)
         {
