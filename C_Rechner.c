@@ -109,6 +109,16 @@ void collatzProblem()
     printf("%d", &c);
 }
 
+void calculatecollatz(int n) {
+    if (n % 2 == 0) {
+        // n ist gerade
+        printf("%d / 2 = %d\n", n, n / 2);
+    } else {
+        // n ist ungerade
+        printf("3 * %d + 1 = %d\n", n, 3 * n + 1);
+    }
+}
+
 void basicFunction()
 {
     float basic;
