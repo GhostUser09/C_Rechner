@@ -96,7 +96,7 @@ void formelBerechnung()
     printf("Spherenfl%cche: %f\n", ae, 4 * pi * r * r);
     printf("Spherenvolumen: %f\n", 4/3 * pi * r * r * r);
     getch();
-    system("clear");
+    system("cls");
     
 }
 
