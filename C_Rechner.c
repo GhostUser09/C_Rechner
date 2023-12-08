@@ -24,9 +24,9 @@ void integerCalculator(){
     printf("Gib eine Zahl f%cr B an!\n", ue);
     scanf("%d", &valueB);
     printf("\n1 = +\n2 = -\n3 = *\n4 = /\n5 = Zur%cck\n", ue);
-    scanf("%f", &function);
-    printf("\nA: %f\n", valueA);
-    printf("B: %f\n", valueB);
+    scanf("%d", &function);
+    printf("\nA: %d\n", valueA);
+    printf("B: %d\n", valueB);
     
     if(function == 1){
         printf("Das Ergebnis ist: %d\n", valueA + valueB);
@@ -54,7 +54,7 @@ void integerCalculator(){
         main();
     }else{
         printf("Das ist keine Option!");
-        taschenRechner();
+        integerCalculator();
     }
 }
 
@@ -68,7 +68,7 @@ void floatingPointCalculator(){
     printf("Gib eine Zahl f%cr B an!\n", ue);
     scanf("%f", &valueB);
     printf("\n1 = +\n2 = -\n3 = *\n4 = /\n5 = Zur%cck\n", ue);
-    scanf("%f", &function);
+    scanf("%d", &function);
     printf("\nA: %f\n", valueA);
     printf("B: %f\n", valueB);
     
@@ -97,7 +97,7 @@ void floatingPointCalculator(){
         main();
     }else{
         printf("Das ist keine Option!");
-        taschenRechner();
+        floatingPointCalculator();
     }
 }
 
@@ -148,7 +148,7 @@ void basicFunction(){
     
     if(basic == 1){
         system("cls");
-        taschenRechner();
+        //taschenRechner();
     }else if(basic == 2){
         system("cls");
         kreisBerechnen();
