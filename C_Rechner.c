@@ -182,14 +182,17 @@ int main(){
         
         if(selection == 1){
             system("cls");
-            taschenRechner();
+            integerCalculator();
         }else if(selection == 2){
             system("cls");
-            kreisBerechnen();
+            floatingPointCalculator();
         }else if(selection == 3){
             system("cls");
-            formelBerechnung();
+            kreisBerechnen();
         }else if(selection == 4){
+            system("cls");
+            formelBerechnung();
+        }else if(selection == 5){
             system("cls");
             printf("Auf wieder sehen!");
             getch();
