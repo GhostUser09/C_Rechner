@@ -129,7 +129,7 @@ void formelBerechnung(){
     printf("Spherenfl%cche: %.2f\n", ae, 4 * pi * radius * radius);
     printf("Spherenvolumen: %.2f\n", 4/3 * pi * radius * radius * radius);
     getch();
-    system("clear");
+    system("cls");
     
 }
 
